@@ -95,9 +95,8 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "http://localhost:3001",
+  baseUrl: "https://api.mesto.dmitryledovskih.nomoredomains.monster",
   headers: {
-    // authorization: "35b7582a-9aef-4479-9408-c27ee8593bdb",
     "Content-Type": "application/json",
   },
 });
