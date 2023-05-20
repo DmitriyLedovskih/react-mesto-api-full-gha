@@ -9,7 +9,9 @@ export function register(email, password) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email, password }),
-  }).then((res) => (res.ok ? res.json() : Promise.reject(res.status)));
+  })
+    .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+    .then((data) => data);
 }
 
 export function login(email, password) {
@@ -23,11 +25,7 @@ export function login(email, password) {
     body: JSON.stringify({ email, password }),
   })
     .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
-    .then((data) => {
-      if (data.token) {
-        return data;
-      }
-    });
+    .then((data) => data);
 }
 
 export function checkToken() {

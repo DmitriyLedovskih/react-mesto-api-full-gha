@@ -71,7 +71,7 @@ function App() {
     evt.preventDefault();
     auth
       .register(formRegisterValue.email, formRegisterValue.password)
-      .then((res) => {
+      .then(() => {
         navigate("/sign-in");
         setFormRegisterValue({ email: "", password: "" });
         setIsSuccess(true);
