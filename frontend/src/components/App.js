@@ -40,6 +40,7 @@ function App() {
   });
   const [isSuccess, setIsSuccess] = React.useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   function handleLogin() {
     setLoggedIn(true);
@@ -119,7 +120,6 @@ function App() {
       });
   }
 
-  const location = useLocation();
   React.useEffect(() => {
     handleTokenCheck();
   }, [location.pathname]);
