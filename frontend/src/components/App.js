@@ -9,7 +9,7 @@ import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
 import DeletePlacePopup from "./DeletePlacePopup";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Register from "./Register";
 import Login from "./Login";
 import * as auth from "../utils/auth";
@@ -119,9 +119,10 @@ function App() {
       });
   }
 
+  const location = useLocation();
   React.useEffect(() => {
     handleTokenCheck();
-  }, []);
+  }, [location.pathname]);
 
   React.useEffect(() => {
     if (loggedIn) {
