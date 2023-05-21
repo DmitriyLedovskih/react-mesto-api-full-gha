@@ -76,12 +76,16 @@ const createUser = (req, res, next) => {
 const updateProfile = (req, res, next) => updateData(req, res, next);
 
 const updateProfileAvatar = (req, res, next) => updateData(req, res, next);
-
+console.log(NODE_ENV);
 const login = (req, res, next) => {
   const { email, password } = req.body;
   User.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'some-key', { expiresIn: '7d' });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : 'some-key',
+        { expiresIn: '7d' },
+      );
 
       res.cookie('token', token, {
         maxAge: 3600000 * 24 * 7,
