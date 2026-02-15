@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-mesto-api-full-gha/static/css/main.de4f3736.css",
-    "main.js": "/react-mesto-api-full-gha/static/js/main.2e9f527a.js",
+    "main.js": "/react-mesto-api-full-gha/static/js/main.cdeecde6.js",
     "static/js/787.5530211c.chunk.js": "/react-mesto-api-full-gha/static/js/787.5530211c.chunk.js",
     "static/media/Inter-Medium.woff": "/react-mesto-api-full-gha/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/react-mesto-api-full-gha/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -20,11 +20,11 @@
     "static/media/close-icon.svg": "/react-mesto-api-full-gha/static/media/close-icon.039f1f5203f653b4bacd.svg",
     "static/media/button-add.svg": "/react-mesto-api-full-gha/static/media/button-add.bed8c136e13907f5eefb.svg",
     "main.de4f3736.css.map": "/react-mesto-api-full-gha/static/css/main.de4f3736.css.map",
-    "main.2e9f527a.js.map": "/react-mesto-api-full-gha/static/js/main.2e9f527a.js.map",
+    "main.cdeecde6.js.map": "/react-mesto-api-full-gha/static/js/main.cdeecde6.js.map",
     "787.5530211c.chunk.js.map": "/react-mesto-api-full-gha/static/js/787.5530211c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de4f3736.css",
-    "static/js/main.2e9f527a.js"
+    "static/js/main.cdeecde6.js"
   ]
 }
