@@ -96,7 +96,13 @@ const login = (req, res, next) => {
 };
 
 const signOut = (req, res) => {
-  res.clearCookie("token").send({ message: "Вы вышли из системы" });
+  res
+    .clearCookie("token", {
+      httpOnly: true,
+      sameSite: "none",
+      secure: true,
+    })
+    .send({ message: "Вы вышли из системы" });
 };
 
 module.exports = {
