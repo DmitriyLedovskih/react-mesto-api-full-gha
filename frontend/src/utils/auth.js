@@ -1,9 +1,9 @@
-const BASE_URL = "https://api.mesto.dmitryledovskih.nomoredomains.monster";
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 export function register(email, password) {
   return fetch(`${BASE_URL}/signup`, {
     method: "POST",
-    credentials: 'include',
+    credentials: "include",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -17,7 +17,7 @@ export function register(email, password) {
 export function login(email, password) {
   return fetch(`${BASE_URL}/signin`, {
     method: "POST",
-    credentials: 'include',
+    credentials: "include",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export function login(email, password) {
 export function checkToken() {
   return fetch(`${BASE_URL}/users/me`, {
     method: "GET",
-    credentials: 'include',
+    credentials: "include",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export function checkToken() {
 export function signOut() {
   return fetch(`${BASE_URL}/signout`, {
     method: "GET",
-    credentials: 'include',
+    credentials: "include",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",

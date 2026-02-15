@@ -16,7 +16,7 @@ class Api {
   getInitialCards() {
     return this._request(`${this._options.baseUrl}/cards`, {
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
     });
   }
 
@@ -24,7 +24,7 @@ class Api {
   getProfileInfo() {
     return this._request(`${this._options.baseUrl}/users/me`, {
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
     });
   }
 
@@ -33,7 +33,7 @@ class Api {
     return this._request(`${this._options.baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
       body: JSON.stringify({
         name: inputData.name,
         about: inputData.about,
@@ -46,7 +46,7 @@ class Api {
     return this._request(`${this._options.baseUrl}/cards`, {
       method: "POST",
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
       body: JSON.stringify({
         name: cardData.name,
         link: cardData.link,
@@ -59,7 +59,7 @@ class Api {
     return this._request(`${this._options.baseUrl}/cards/${id}`, {
       method: "DELETE",
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
     });
   }
 
@@ -68,7 +68,7 @@ class Api {
     return this._request(`${this._options.baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
       body: JSON.stringify({
         avatar: avatarData.avatar,
       }),
@@ -80,7 +80,7 @@ class Api {
     return this._request(`${this._options.baseUrl}/cards/${id}/likes`, {
       method: "PUT",
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
     });
   }
 
@@ -89,13 +89,13 @@ class Api {
     return this._request(`${this._options.baseUrl}/cards/${id}/likes`, {
       method: "DELETE",
       headers: this._options.headers,
-      credentials: 'include',
+      credentials: "include",
     });
   }
 }
 
 const api = new Api({
-  baseUrl: "https://api.mesto.dmitryledovskih.nomoredomains.monster",
+  baseUrl: process.env.API_URL,
   headers: {
     "Content-Type": "application/json",
   },
