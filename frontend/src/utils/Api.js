@@ -95,7 +95,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: process.env.API_URL,
+  baseUrl: process.env.REACT_APP_API_URL,
   headers: {
     "Content-Type": "application/json",
   },
