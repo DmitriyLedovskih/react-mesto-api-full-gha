@@ -1,6 +1,5 @@
 const allowedCors = [
   process.env.API_URL,
-  process.env.APP_URL,
   "http://localhost:3000",
   "http://localhost:3001",
   "https://dmitriyledovskih.github.io",
