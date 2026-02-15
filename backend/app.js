@@ -1,16 +1,17 @@
-require('dotenv').config();
-const express = require('express');
-const { errors } = require('celebrate');
-const mongoose = require('mongoose');
-const cookieParser = require('cookie-parser');
-const error = require('./middlewares/error');
-const router = require('./routes');
-const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('./middlewares/cors');
+require("dotenv").config();
+const express = require("express");
+const { errors } = require("celebrate");
+const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
+const error = require("./middlewares/error");
+const router = require("./routes");
+const { requestLogger, errorLogger } = require("./middlewares/logger");
+const cors = require("./middlewares/cors");
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3001, DB_URL = "mongodb://localhost:27017/mestodb" } =
+  process.env;
 
-mongoose.connect('mongodb://localhost:27017/mestodb');
+mongoose.connect(DB_URL);
 
 const app = express();
 app.use(express.json());
